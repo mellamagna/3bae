@@ -8,8 +8,7 @@ import Cart from './components/Cart';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import HeaderNavbar from './components/HeaderNavbar';
 
@@ -31,7 +30,6 @@ function App() {
             <Home />
           </Route>
         </Switch>
-
 
       </div>
     </Router>
