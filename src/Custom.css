@@ -1,8 +1,27 @@
 #headernavbar{
 	background-color:rgb(70, 70, 70);
 	color: white;
+	padding: 10px;
+}
+
+#slogan{
+	font-style: italic;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 50px;
+	line-height: 50px;
 }
 
 .nav-link{
 	color: white;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 50px;
+	line-height: 50px;
+}
+
+.vl {
+	margin-left: 20px;
+	border-left: 2px solid gray;
+	height: 50px;
 }
