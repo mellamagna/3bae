@@ -31,12 +31,33 @@
 }
 
 /**************************************************
+ * LOGO
+ **************************************************/
+
+span.logochar1{
+	color: #e53238;
+}
+
+span.logochar2{
+	color: #0064d2;
+}
+
+span.logochar3{
+	color: #f5af02;
+}
+
+span.logochar4{
+	color: #86b817;
+}
+
+/**************************************************
  * BODY
  **************************************************/
 
 div.translayer {
 	background-color: #ffffff;
-	opacity: 0.6;
+	border: 1px solid black;
+	opacity: 0.8;
 }
 
 div.translayer p {
