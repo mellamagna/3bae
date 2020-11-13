@@ -19,8 +19,7 @@ function App() {
 
 
         <div className="container-fluid" id="headernavbar">
-          
-          <nav id="headernavbarlinks">
+          <nav>
             <ul className="nav">
               <li className="nav-item">
                 <Link className="nav-link" to="/"><img src="3bae.svg" height="50" alt="3bae" id="logo"/></Link>
