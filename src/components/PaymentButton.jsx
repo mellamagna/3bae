@@ -6,7 +6,7 @@ const PaymentButton = () => {
 
 	return (
 		<span>
-			<Button variant="success" id="paymentbutton"><Link to="/success" className="buttonlink">Pay Now</Link></Button>
+			<Button variant="success" id="paymentbutton" disabled><Link to="/success" className="buttonlink">Pay Now</Link></Button>
 		</span>
 	);
 };

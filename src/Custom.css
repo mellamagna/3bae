@@ -6,6 +6,9 @@
 	background-color: #1f1f1f;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	position: fixed;
+	top: 0;
+	z-index: 999;
 }
 
 #headernavbar{
@@ -81,12 +84,20 @@ span.logochar4{
  * BODY
  **************************************************/
 
+body{
+	background-color: #1f1f1f;
+}
+
 main{
-	min-height: 800px;
+	min-height: 400px;
+	padding-top: 80px;
 	padding-bottom: 70px;
+	background-color: #ffffff;
 }
 
 div.translayer {
+	z-index: -1;
+	margin-top: 20px;
 	background-color: #ffffff;
 	border: 1px solid black;
 	opacity: 0.85;

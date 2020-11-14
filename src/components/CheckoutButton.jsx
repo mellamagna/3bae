@@ -10,7 +10,7 @@ const CheckoutButton = () => {
 
 	return (
 		<span>
-			<Button variant="success" id="checkoutbutton"><Link to="/checkout" className="buttonlink">Checkout</Link></Button>
+			<Button variant="success" id="checkoutbutton" disabled><Link to="/checkout" className="buttonlink">Checkout</Link></Button>
 		</span>
 	);
 };
