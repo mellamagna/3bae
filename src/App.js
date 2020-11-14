@@ -80,7 +80,7 @@ function App() {
 			name: "Doubly Linked Goldfish",
 			image: Img06,
 			price: 4,
-			desc: "Allows two-way traversal between Goldfish, but requires more memory than singly-linked Goldfish."
+			desc: "Allows two-way traversal between Goldfish, but requires more space than singly-linked Goldfish."
     },
     {
 			id: 7,
@@ -105,9 +105,9 @@ function App() {
     },
     {
 			id: 10,
-			name: "Overflow of Goldfish",
+			name: "Goldfish Overflow",
 			image: Img10,
-			price: 65536,
+			price: 655.36,
 			desc: "65,535 Goldfish. If you add one more, they all disappear."
     },
     {
