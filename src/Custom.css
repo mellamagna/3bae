@@ -112,6 +112,10 @@ h1{
  * LISTINGS
  **************************************************/
 
+.productlist{
+	width: 100%;
+}
+
 .listing:first-child{
 	 padding: 10px;
  }
@@ -130,3 +134,12 @@ tr{
 	font-size: larger;
 	text-align: center;
 }
+
+/**************************************************
+ * CART
+ **************************************************/
+
+ #emptycartmsg{
+	 margin-top: 100px;
+	 text-align: center;
+ }

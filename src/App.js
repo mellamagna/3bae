@@ -79,106 +79,117 @@ function App() {
 			image: Img06,
 			price: 4,
 			desc: "Allows two-way traversal between Goldfish, but requires more space than singly-linked Goldfish."
-    },
-    {
+		},
+		{
 			id: 7,
 			name: "Heap of Goldfish",
 			image: Img07,
 			price: 8,
 			desc: "A partially-ordered structure of Goldfish with the highest-priority Goldfish stored at the root."
-    },
-    {
+		},
+		{
 			id: 8,
 			name: "Stack of Goldfish",
 			image: Img08,
 			price: 16,
 			desc: "A structure of Goldfish that observes L(G)IF(G)O (Last Goldfish In, First Goldfish Out)."
-    },
-    {
+		},
+		{
 			id: 9,
 			name: "Queuestack of Goldfish",
 			image: Img09,
 			price: 32,
 			desc: "A stack of Goldfish queues. Useful for when you want some FIFO in your LIFO."
-    },
-    {
+		},
+		{
 			id: 10,
 			name: "Goldfish Overflow",
 			image: Img10,
 			price: 655.36,
 			desc: "Exactly 65,535 Goldfish. If you add one more, they all disappear because the amount of Goldfish any one person can have at a time is stored in the universe as a 16-bit integer."
-    },
-    {
+		},
+		{
 			id: 11,
 			name: "Haunted Active Porcelain Cow Doll",
 			image: Img11,
 			price: 45,
 			desc: "(Author's note: I *actually* went and bought this awful thing while constructing this project, and it will likely arrive sometime this week. Expect it to haunt future Zoom calls.)"
-    },
-    {
+		},
+		{
 			id: 12,
 			name: "\"Helth\" Face Mask",
 			image: Img12,
 			price: 12,
 			desc: "stonks"
-    },
-    {
+		},
+		{
 			id: 13,
 			name: "Nicolas Cage Stud Earrings",
 			image: Img13,
 			price: 8,
 			desc: "Item ID #13 for a reason. Perhaps more haunted than the actual cow doll."
-    },
-    {
+		},
+		{
 			id: 14,
 			name: "Nicolas Cage Magic Reversible Sequin Pillow",
 			image: Img14,
 			price: 7,
 			desc: "Yes, this is a real item people actually made and are selling. See Wish.com for further information."
-    },
-    {
+		},
+		{
 			id: 15,
 			name: "Casper the Ghost VHS",
 			image: Img15,
 			price: 4,
 			desc: "You know what they say: \"Going once, going twice...\""
-    },
-    {
+		},
+		{
 			id: 16,
 			name: "Mamma Mia 2 DVD",
 			image: Img16,
 			price: 7,
 			desc: "Here we go again."
-    },
-    {
+		},
+		{
 			id: 17,
 			name: "Hot Dog Sandwich",
 			image: Img17,
 			price: 5,
 			desc: "...but I repeat myself (or do I?)."
-    },
-    {
+		},
+		{
 			id: 18,
 			name: "Pizza Pineapple",
 			image: Img18,
 			price: 6,
 			desc: "Everyone asks if pineapple belongs on pizza, but does anyone ever ask if pizza belongs on pineapple? The age-old question, finally answered. Leave your prejudice at the door."
-    },
-    {
+		},
+		{
 			id: 19,
 			name: "Hot Dog Pizza",
 			image: Img19,
 			price: 17,
 			desc: "Now you're thinking with portals."
-    },
-    {
+		},
+		{
 			id: 20,
 			name: "A sheep!",
 			image: Img20,
 			price: 200,
 			desc: "I've always taken offense to the word \"sheep\" being thrown around with a negative connotation. Sheep are adorable."
-    },
+		},
 	]
+
+	const addToCart = item => {
+		setCart([...cart,
+			products[item - 1]
+		])
+	}
+
+	const removeFromCart = item => {
+		const filtered = cart.filter(entry => entry.id != item);
+		setCart(filtered)
+	}
 
 	return (
 		<Router>
@@ -189,10 +200,10 @@ function App() {
         <main>
           <Switch>
             <Route path="/listings">
-              <Listings products={ products }/>
+              <Listings products={ products } addToCart={ addToCart }/>
             </Route>
             <Route path="/cart">
-              <Cart products={ products } cart={ cart }/>
+              <Cart products={ products } cart={ cart } removeFromCart={ removeFromCart }/>
             </Route>
             <Route path="/">
               <Home />

@@ -6,7 +6,7 @@ const Listings = props => {
 	return (
 		<div className="container">
 			<h1>Listings</h1>
-			<table cellPadding="10">
+			<table className="productlist" cellPadding="10">
 				<tr>
 					<th>ID</th>
 					<th>Image</th>
@@ -21,6 +21,7 @@ const Listings = props => {
 							image={item.image}
 							price={item.price}
 							desc={item.desc}
+							addToCart={props.addToCart}
 						/>
 					)
 				})}

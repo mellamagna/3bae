@@ -3,6 +3,11 @@ import { Button } from 'react-bootstrap';
 
 const Listing = props => {
 
+	const handleClick = () => {
+		console.log(props.id);
+		props.addToCart(props.id);
+	}
+
 	return (
 		<tr>
 			<td>{props.id}</td>
@@ -13,7 +18,7 @@ const Listing = props => {
 				<h5>${props.price.toFixed(2)}</h5>
 				<p className="freeship">+FREE Shipping</p>
 			</td>
-			<td><Button variant="primary">Add&nbsp;to&nbsp;Cart</Button></td>
+			<td><Button variant="primary" onClick={handleClick}>Add&nbsp;to&nbsp;Cart</Button></td>
 		</tr>
 	);
 };
