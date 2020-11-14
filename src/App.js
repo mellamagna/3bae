@@ -54,7 +54,7 @@ function App() {
 		},
 		{
 			id: 3,
-			name: "Test Book 3: This Time It's Personal",
+			name: "Test Book 3: This Time, It's Personal",
 			image: Img03,
 			price: 15.00,
 			desc: "Sergeant Foo Bar, seeking revenge for his kidnapped son, confronts the Hello World Order."
