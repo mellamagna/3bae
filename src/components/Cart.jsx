@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import CartListing from './CartListing';
 import { Link } from 'react-router-dom';
+import CheckoutButton from './CheckoutButton';
 
 const Cart = props => {
+
+	const PluralS = props => {
+		if(props.num > 1) {
+			return <Fragment>s</Fragment>;
+		} else {
+			return null;
+		}
+	}
+
 	if(props.cart.length > 0) {
 		return (
 			<div className="container">
-				<h1>Your Cart</h1>
+				<div className="row" id="checkouttopbar">
+					<div className="col-8">
+						<h1>Your Cart ({props.cart.length} item<PluralS num={props.cart.length}/>)</h1>
+					</div>
+					<div className="col">
+						<CheckoutButton />
+					</div>
+				</div>
 				<table className="productlist" cellPadding="10">
 					<tr>
 						<th>ID</th>

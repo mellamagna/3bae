@@ -10,7 +10,7 @@ const CartListing = props => {
 	return (
 		<tr>
 			<td>{props.id}</td>
-			<td><img src={props.image} width="256" alt={props.name} /></td>
+			<td><img src={props.image} width="128" alt={props.name} /></td>
 			<td>
 				<h4>{props.name}</h4>
 				<p>{props.desc}</p>

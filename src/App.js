@@ -32,6 +32,8 @@ import Img17 from './assets/images/17.jpg';
 import Img18 from './assets/images/18.jpg';
 import Img19 from './assets/images/19.jpg';
 import Img20 from './assets/images/20.jpg';
+import Checkout from './components/Checkout';
+import Success from './components/Success';
 
 function App() {
 
@@ -181,14 +183,29 @@ function App() {
 	]
 
 	const addToCart = item => {
-		setCart([...cart,
-			products[item - 1]
-		])
+		const check = cart.filter(entry => entry.id === item);
+		if(check.length === 0) {
+			setCart([...cart,
+				products[item - 1]
+			])
+		}
 	}
 
 	const removeFromCart = item => {
-		const filtered = cart.filter(entry => entry.id != item);
+		const filtered = cart.filter(entry => entry.id !== item);
 		setCart(filtered)
+	}
+
+	const resetCart = () => {
+		setCart([])
+	}
+
+	const calculateTotal = () => {
+		let total = 0;
+		cart.forEach(item => {
+			total += item.price;
+		})
+		return total.toFixed(2);
 	}
 
 	return (
@@ -199,8 +216,14 @@ function App() {
 
         <main>
           <Switch>
+		    <Route path="/success">
+              <Success resetCart={ resetCart }/>
+            </Route>
+			<Route path="/checkout">
+              <Checkout cart={ cart } calculateTotal={ calculateTotal }/>
+            </Route>
             <Route path="/listings">
-              <Listings products={ products } addToCart={ addToCart }/>
+              <Listings products={ products } cart={ cart } addToCart={ addToCart }/>
             </Route>
             <Route path="/cart">
               <Cart products={ products } cart={ cart } removeFromCart={ removeFromCart }/>

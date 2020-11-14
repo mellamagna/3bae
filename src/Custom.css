@@ -136,10 +136,26 @@ tr{
 }
 
 /**************************************************
- * CART
+ * CART AND CHECKOUT
  **************************************************/
 
  #emptycartmsg{
-	 margin-top: 100px;
-	 text-align: center;
+	margin-top: 100px;
+	text-align: center;
+	font-size: larger;
  }
+
+#checkoutbutton{
+	margin-top: 30px;
+	float: right;
+}
+
+.buttonlink{
+	color: white;
+}
+
+#totalbox{
+	background-color: #ffffff;
+	border: 1px solid black;
+	padding: 10px;
+}

@@ -8,6 +8,15 @@ const Listing = props => {
 		props.addToCart(props.id);
 	}
 
+	const AddToCart = props => {
+		const check = props.cart.filter(entry => entry.id === props.id);
+		if(check.length === 0) {
+			return <Button variant="primary" onClick={handleClick}>Add&nbsp;to&nbsp;Cart</Button>;
+		} else {
+			return <Button variant="secondary" disabled>In&nbsp;Cart</Button>;
+		}
+	}
+
 	return (
 		<tr>
 			<td>{props.id}</td>
@@ -18,7 +27,7 @@ const Listing = props => {
 				<h5>${props.price.toFixed(2)}</h5>
 				<p className="freeship">+FREE Shipping</p>
 			</td>
-			<td><Button variant="primary" onClick={handleClick}>Add&nbsp;to&nbsp;Cart</Button></td>
+			<td><AddToCart cart={props.cart} id={props.id}/></td>
 		</tr>
 	);
 };

@@ -21,6 +21,7 @@ const Listings = props => {
 							image={item.image}
 							price={item.price}
 							desc={item.desc}
+							cart={props.cart}
 							addToCart={props.addToCart}
 						/>
 					)
