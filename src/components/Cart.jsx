@@ -12,7 +12,7 @@ const Cart = props => {
 					<th>Item&nbsp;Name / Description</th>
 					<th>Actions</th>
 				</tr>
-				{props.products.map(item => {
+				{props.cart.map(item => {
 					return(
 						<CartListing 
 							id={item.id}
