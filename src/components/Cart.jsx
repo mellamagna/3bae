@@ -4,7 +4,7 @@ import CartListing from './CartListing';
 const Cart = props => {
 	return (
 		<div className="container">
-			<h1>Listings</h1>
+			<h1>Your Cart</h1>
 			<table cellPadding="10">
 				<tr>
 					<th>ID</th>
