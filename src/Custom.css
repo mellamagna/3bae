@@ -2,8 +2,14 @@
  * HEADER
  **************************************************/
 
+#headernavbarouter{
+	background-color: #1f1f1f;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 #headernavbar{
-	background-color:rgb(70, 70, 70);
+	background-color: #1f1f1f;
 	color: white;
 	padding: 10px;
 }
@@ -31,8 +37,29 @@
 }
 
 /**************************************************
+ * FOOTER
+ **************************************************/
+
+ #footer{
+	background-color: #1f1f1f;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	font-size: small;
+}
+
+#logofooter{
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+/**************************************************
  * LOGO
  **************************************************/
+
+.logo{
+	height: 50px;
+}
 
 span.logochar1{
 	color: #e53238;
@@ -54,15 +81,20 @@ span.logochar4{
  * BODY
  **************************************************/
 
+main{
+	min-height: 800px;
+	padding-bottom: 70px;
+}
+
 div.translayer {
 	background-color: #ffffff;
 	border: 1px solid black;
-	opacity: 0.8;
+	opacity: 0.85;
 }
 
 div.translayer p {
 	margin: 5%;
-	font-weight: bold;
+/*	font-weight: bold;	*/
 	color: #000000;
 	opacity: 1.0;
 }
@@ -70,4 +102,31 @@ div.translayer p {
 .fineprint{
 	 font-size: small;
 	 text-align: right;
+}
+
+h1{
+	margin-top: 20px;
+}
+
+/**************************************************
+ * LISTINGS
+ **************************************************/
+
+.listing:first-child{
+	 padding: 10px;
+ }
+
+.freeship{
+	font-size: small;
+	color: grey;
+}
+
+tr{
+	border-top: solid #e0e0e0 1px;
+}
+
+.pageindex{
+	margin-top: 20px;
+	font-size: larger;
+	text-align: center;
 }
