@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 
 const NextPageIndex = () => {
 
