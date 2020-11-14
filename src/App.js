@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './Custom.css'
@@ -12,17 +11,17 @@ import {
 	Route
 } from "react-router-dom";
 import HeaderNavbar from './components/HeaderNavbar';
-import BROKENIMAGE from './assets/images/noimage.gif';
-import Img01 from './assets/images/noimage.gif';
-import Img02 from './assets/images/noimage.gif';
-import Img03 from './assets/images/noimage.gif';
-import Img04 from './assets/images/noimage.gif';
-import Img05 from './assets/images/noimage.gif';
-import Img06 from './assets/images/noimage.gif';
-import Img07 from './assets/images/noimage.gif';
-import Img08 from './assets/images/noimage.gif';
-import Img09 from './assets/images/noimage.gif';
-import Img10 from './assets/images/noimage.gif';
+import Footer from './components/Footer';
+import Img01 from './assets/images/01.jpg';
+import Img02 from './assets/images/02.jpg';
+import Img03 from './assets/images/03.jpg';
+import Img04 from './assets/images/04.jpg';
+import Img05 from './assets/images/05.jpg';
+import Img06 from './assets/images/06.jpg';
+import Img07 from './assets/images/07.jpg';
+import Img08 from './assets/images/08.jpg';
+import Img09 from './assets/images/09.jpg';
+import Img10 from './assets/images/10.jpg';
 import Img11 from './assets/images/11.jpg';
 import Img12 from './assets/images/12.jpg';
 import Img13 from './assets/images/13.jpg';
@@ -33,7 +32,6 @@ import Img17 from './assets/images/17.jpg';
 import Img18 from './assets/images/18.jpg';
 import Img19 from './assets/images/19.jpg';
 import Img20 from './assets/images/20.jpg';
-import Footer from './components/Footer';
 
 function App() {
 
@@ -59,7 +57,7 @@ function App() {
 			name: "Test Book 3: This Time It's Personal",
 			image: Img03,
 			price: 15.00,
-			desc: "Sergeant Foo Bar, seeking revenge for his missing son, confronts the Hello World Order."
+			desc: "Sergeant Foo Bar, seeking revenge for his kidnapped son, confronts the Hello World Order."
 		},
 		{
 			id: 4,
@@ -108,14 +106,14 @@ function App() {
 			name: "Goldfish Overflow",
 			image: Img10,
 			price: 655.36,
-			desc: "65,535 Goldfish. If you add one more, they all disappear."
+			desc: "Exactly 65,535 Goldfish. If you add one more, they all disappear because the amount of Goldfish any one person can have at a time is stored in the universe as a 16-bit integer."
     },
     {
 			id: 11,
 			name: "Haunted Active Porcelain Cow Doll",
 			image: Img11,
 			price: 45,
-			desc: "(Author's note: I *actually* bought this awful thing while constructing this project, and it will likely arrive sometime this week. Expect it to haunt future Zoom calls.)"
+			desc: "(Author's note: I *actually* went and bought this awful thing while constructing this project, and it will likely arrive sometime this week. Expect it to haunt future Zoom calls.)"
     },
     {
 			id: 12,
@@ -133,7 +131,7 @@ function App() {
     },
     {
 			id: 14,
-			name: "Nicolas Cage Reversible Sequin Pillow",
+			name: "Nicolas Cage Magic Reversible Sequin Pillow",
 			image: Img14,
 			price: 7,
 			desc: "Yes, this is a real item people actually made and are selling. See Wish.com for further information."
@@ -194,7 +192,7 @@ function App() {
               <Listings products={ products }/>
             </Route>
             <Route path="/cart">
-              <Cart cart={ cart }/>
+              <Cart products={ products } cart={ cart }/>
             </Route>
             <Route path="/">
               <Home />

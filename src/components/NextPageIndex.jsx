@@ -34,7 +34,7 @@ const NextPageIndex = () => {
 				<FakeLink id="8"/>
 				<FakeLink id="9"/>
 				<FakeLink id="10"/>
-				<FakeLink id=">"/>
+				<FakeLink id=">>"/>
 			</div>
 
 			<Modal show={show} onHide={handleClose}>
